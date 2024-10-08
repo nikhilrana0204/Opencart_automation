@@ -54,7 +54,7 @@ public class TC01_FunctionalTest_Positive {
     }
         @Test(priority=2)
         public void loginInput() throws InterruptedException{
-        	Thread.sleep(5000);
+        	Thread.sleep(7000);
         	driver.findElement(By.xpath("//input[@name='email' and @placeholder='E-Mail Address']")).sendKeys("user11@example.com");
         	driver.findElement(By.xpath("//input[@name='password' and @placeholder='Password']")).sendKeys("password123");
         }
