@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TC03_UITest">
+      <class name="TC04_SecurityTest">
         <methods>
-          <include name="verifyLoginButtonVisibilityAndAlignment"/>
           <include name="teardown"/>
           <include name="setup"/>
+          <include name="testSQLInjection"/>
         </methods>
-      </class> <!-- TC03_UITest -->
+      </class> <!-- TC04_SecurityTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
