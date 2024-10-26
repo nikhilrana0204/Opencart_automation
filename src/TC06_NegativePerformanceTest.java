@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
-public class TC05_PositivePerformanceTest {
+public class TC06_NegativePerformanceTest {
      WebDriver driver;
 
     @BeforeTest
@@ -51,11 +51,11 @@ public class TC05_PositivePerformanceTest {
         public void loginInput() throws InterruptedException{
         	Thread.sleep(7000);
         	driver.findElement(By.xpath("//input[@name='email' and @placeholder='E-Mail Address']")).sendKeys("user11@example.com");
-        	driver.findElement(By.xpath("//input[@name='password' and @placeholder='Password']")).sendKeys("password123");
+        	driver.findElement(By.xpath("//input[@name='password' and @placeholder='Password']")).sendKeys("password13");
         }
         @Test(priority=3)
         public void Login() throws InterruptedException{
-        	Thread.sleep(3000);
+        	Thread.sleep(2000);
         	driver.findElement(By.xpath("//button[@type='submit']")).click();
     	
         System.out.println("Test case is running...");
@@ -73,11 +73,11 @@ public class TC05_PositivePerformanceTest {
             long endTime = System.currentTimeMillis();
             
             // Assert that the current URL contains "dashboard"
-            assertTrue(driver.getCurrentUrl().contains("customer"), "Expected URL to contain 'dashboard'"); // Replace with actual success URL
+            assertTrue(driver.getCurrentUrl().contains("customer"), "Expected URL to contain 'customer'"); // Replace with actual success URL
 
             // Calculate the duration and assert that the login completed in under 3 seconds
             long duration = endTime - startTime;
-            assertTrue(duration <= 3000, "Login took too long: " + duration + "ms"); // Check duration
+            assertTrue(duration <= 1000, "Login took too long: " + duration + "ms"); // Check duration
         }
 
 
